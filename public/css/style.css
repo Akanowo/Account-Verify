@@ -49,6 +49,10 @@ form input {
     width: 60%;
 }
 
+input::placeholder {
+    color: #808080;
+}
+
 form button {
     margin: 10px;
 }

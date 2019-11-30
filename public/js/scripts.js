@@ -1,23 +1,22 @@
 //jshint esversion:6
+let errorMessage = document.getElementById('errorMessage');
+
+function validateForm() {
+  let username = "Maria";
+  let passwordValue = 123;
+  let name = document.forms.login.name.value;
+  let password = document.forms.login.password.value;
+  if(name == username && password == passwordValue) {
+    return true;
+  }
+  else {
+    errorMessage.innerHTML = 'Invalid login details';
+      return false;
+  }
+}
+
 $(document).ready(function () {
   $('select').formSelect();
   var instance = M.FormSelect.getInstance();
   instance.getSelectedValues();
-});
-let name = document.getElementById('name');
-let password = document.getElementById('password');
-
-let submitBtn = document.getElementById('submit');
-
-let errorMessage = document.getElementById('errorMessage');
-
-submitBtn.addEventListener('click', () => {
-  if (name.value !== "Maria" && password.value !== 1) {
-    errorMessage.innerHTML = 'Invalid login details';
-    event.preventDefault();
-    return false;
-  } else {
-    return true;
-  }
-});
-
+}); 
