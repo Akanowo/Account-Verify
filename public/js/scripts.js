@@ -1,4 +1,9 @@
 //jshint esversion:6
+$(document).ready(function () {
+  $('select').formSelect();
+  var instance = M.FormSelect.getInstance();
+  instance.getSelectedValues();
+});
 let name = document.getElementById('name');
 let password = document.getElementById('password');
 
@@ -16,8 +21,3 @@ submitBtn.addEventListener('click', () => {
   }
 });
 
-$(document).ready(function () {
-  $('select').formSelect();
-  var instance = M.FormSelect.getInstance();
-  instance.getSelectedValues();
-});
