@@ -80,6 +80,10 @@ form button {
     height: 10em;
 }
 
+#bankCode {
+    display: none;
+}
+
 /* Media queries */
 
 @media screen and (max-width: 786px) {
