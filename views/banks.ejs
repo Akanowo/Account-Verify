@@ -5,21 +5,22 @@
         <i class="far fa-user fa-4x"></i>
     </div>
     <h2>Verify Your Account</h2>
-    <form action="/banks" method="post" id="form">
+    <form action="/banks" method="post" id="form" onsubmit="return validateBankForm();">
         <div class="input-field" id="input-field">
            <input list="banks" id="bankName" placeholder="Type in or select a bank" 
-           type="text" onchange ="setBankName();" name="bankName"/ autocomplete="off">
+           type="text" onchange ="setBankName();" name="bankName"/ autocomplete="off" required>
            <datalist id="banks">
             
            </datalist>
         </div>
-        <input type="text" id="bankCode" name="bankCode"><br>
-        <input type="text" placeholder="Enter account number" id="accNumber" name="accountNumber" autocomplete="off">
+        <input type="text" id="bankCode" name="bankCode">
+        <input type="text" placeholder="Enter account number" id="accNumber" name="accountNumber" autocomplete="off" required>
         <button class="btn waves-effect waves-light" type="reset" name="action">Reset
         </button>
         <button class="btn waves-effect waves-light" type="submit" name="action">Verify
             <i class="material-icons right">arrow_forward</i>
-        </button>
+        </button><br>
+        <p id="errorMessage"></p>
     </form>
 </div>
 <%- include("partials/footer") -%>

@@ -39,20 +39,20 @@ app.set("view engine", "ejs");
 // Get request to the home route
 
 app.get('/', (_req, _res) => {
-    _res.render('index', {
+    _res.render('banks', {
         banks: bankList
     });
 });
 
 // Post request to the home route
 
-app.post('/', (_req, _res) => {
-    _res.redirect('/banks');
-});
+// app.post('/', (_req, _res) => {
+//     _res.redirect('/banks');
+// });
 
 // Get request to the banks route
 app.get('/banks', (_req, _res) => {
-    _res.render('banks');
+    _res.redirect('/');
 });
 
 // Post request to the banks route
