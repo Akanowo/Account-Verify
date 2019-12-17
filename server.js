@@ -82,7 +82,7 @@ app.post('/banks', (_req, _res) => {
 });
 
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || 8080, () => {
     console.log('Server started on port 3000 \nCopy link in browser: http://localhost:8080 ');
 
 });
